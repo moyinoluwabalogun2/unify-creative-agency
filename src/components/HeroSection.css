@@ -4,40 +4,33 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 110px;
 }
+
 
 .hero-background {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 0;
 }
 
 .hero-gradient {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 50%,  rgba(191, 4, 248, 0.3) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(223, 12, 231, 0.15) 0%, transparent 50%);
+  inset: 0;
+  
 }
+
 
 .hero-grid {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    linear-gradient(rgba(107, 33, 229, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(107, 33, 229, 0.1) 1px, transparent 1px);
+  inset: 0;
+  background-image:url('src/assets/gradient.jpg') no-repeat;
+    
+  
   background-size: 50px 50px;
   opacity: 0.3;
 }
+
 
 .hero-grid-layout {
   display: grid;
@@ -55,8 +48,8 @@
 .hero-tag-text {
   display: inline-block;
   padding: var(--space-xs) var(--space-md);
-  background: rgba(107, 33, 229, 0.1);
-  border: 1px solid  rgba(191, 4, 248, 0.3);
+  background: rgba(200,107,255,0.1);
+  border: 1px solid rgba(200,107,255,0.3);
   border-radius: 100px;
   font-size: var(--font-size-sm);
   font-weight: 700;
@@ -68,6 +61,7 @@
 .hero-headline {
   margin-bottom: var(--space-lg);
   line-height: 1.1;
+  font-size: 40px;
 }
 
 .hero-subheadline {
@@ -112,23 +106,21 @@
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-lg) var(--space-2xl);
-  background: var(--gradient-purple);
+  background: #ffffff;
   border: none;
-  color: var(--color-white);
+  color: #000000;
   font-size: var(--font-size-lg);
   font-weight: 700;
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: var(--transition);
   text-transform: uppercase;
-  font-family: var(--font-primary);
-  box-shadow: 0 0 30px  rgba(191, 4, 248, 0.3);
+  font-family: var(--font-secondary);
   margin-bottom: var(--space-md);
 }
 
 .hero-main-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px  rgba(191, 4, 248, 0.3);
+  opacity: 0.9;
 }
 
 .hero-cta-micro {
@@ -170,14 +162,44 @@
 .hero-visual {
   position: relative;
 }
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* ensures the full image fits */
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;   /* controls how big the image can be */
+  margin: 0 auto;
+  overflow: hidden;   /* prevents image overflow */
+}
+
+
+.hero-image-glow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at 50% 50%, var(--color-purple-glow) 0%, transparent 70%);
+  opacity: 0.5;
+  filter: blur(40px);
+}
 
 .visual-card {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255,255,255,0.02);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(107, 33, 229, 0.3);
+  border: 1px solid rgba(200,107,255,0.3);
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .spot-indicator {
@@ -186,7 +208,7 @@
 
 .spot-bar {
   height: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
   border-radius: 2px;
   margin-bottom: var(--space-xs);
   overflow: hidden;
@@ -217,8 +239,8 @@
 
 .grid-cell {
   aspect-ratio: 1;
-  background: rgba(107, 33, 229, 0.1);
-  border: 1px solid  rgba(191, 4, 248, 0.3);
+  background: rgba(200,107,255,0.1);
+  border: 1px solid rgba(200,107,255,0.3);
   border-radius: var(--border-radius);
   transition: var(--transition);
   animation: gridPulse 3s ease-in-out infinite;
@@ -238,10 +260,11 @@
     opacity: 0.3;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.1);
-    background: rgba(107, 33, 229, 0.2);
+    background: rgba(200,107,255,0.2);
   }
 }
 
@@ -250,29 +273,29 @@
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
-  
+
   .hero-content {
     text-align: center;
   }
-  
+
   .hero-subheadline {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-stats {
     justify-content: center;
   }
-  
+
   .hero-main-cta {
     width: 100%;
     justify-content: center;
   }
-  
+
   .trust-indicators {
     justify-content: center;
   }
-  
+
   .hero-visual {
     max-width: 500px;
     margin: 0 auto;
@@ -286,4 +309,12 @@
     align-items: center;
     gap: var(--space-md);
   }
+  .hero-content {
+    margin-top: 50px;
+  }
+  
 }
+
+
+
+

@@ -7,9 +7,9 @@ import AuditCoverage from './components/AuditCoverage';
 import HonestSection from './components/HonestSection';
 import ProcessSection from './components/ProcessSection';
 import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
-import TrustBar from './components/TrustBar';
-import MemberGrid from './components/MemberGrid';
+
+
+
 import Footer from './components/Footer';
 import './App.css';
 
@@ -55,14 +55,14 @@ function App() {
       <Navbar heroCtaRef={heroCtaRef} />
       <main>
         <HeroSection ctaRef={heroCtaRef} />
-        <TrustBar />
+        
         <TargetAudience heroCtaRef={heroCtaRef} />
-        <MemberGrid />
+       
         <AuditCoverage heroCtaRef={heroCtaRef} />
         <HonestSection heroCtaRef={heroCtaRef} />
         <ProcessSection heroCtaRef={heroCtaRef} />
         <FAQ heroCtaRef={heroCtaRef} />
-        <FinalCTA heroCtaRef={heroCtaRef} />
+        
       </main>
       <Footer />
     </>

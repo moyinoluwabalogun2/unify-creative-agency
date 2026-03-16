@@ -1,0 +1,137 @@
+/*.member-grid-section {
+  background: var(--color-black-light);
+  overflow: hidden;
+}
+
+.member-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.member-sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  margin-top: var(--space-sm);
+}
+
+.member-slider {
+  width: 100%;
+  overflow: hidden;
+  margin: var(--space-2xl) 0;
+  cursor: grab;
+}
+
+.member-slider:active {
+  cursor: grabbing;
+}
+
+.member-track {
+  display: flex;
+  gap: var(--space-md);
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.member-card {
+  flex: 0 0 280px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(107, 33, 229, 0.2);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.member-card:hover {
+  border-color: var(--color-purple);
+  background: rgba(107, 33, 229, 0.05);
+  box-shadow: 0 0 30px rgba(107, 33, 229, 0.2);
+}
+
+.member-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-purple), var(--color-purple-light));
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.member-info h4 {
+  font-size: var(--font-size-base);
+  margin-bottom: 2px;
+  color: var(--color-white);
+}
+
+.member-info p {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  margin-bottom: 4px;
+}
+
+.member-followers {
+  font-size: var(--font-size-xs);
+  color: var(--color-purple);
+  font-weight: 700;
+}
+
+.member-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  margin-top: var(--space-2xl);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    flex: 0 0 240px;
+    padding: var(--space-md);
+  }
+  
+  .member-stats {
+    gap: var(--space-lg);
+  }
+}*/

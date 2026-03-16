@@ -99,22 +99,21 @@
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-lg) var(--space-2xl);
-  background: var(--gradient-purple);
-  color: var(--color-white);
+  background: #ffffff;
   border: none;
+  color: #000000;
   font-size: var(--font-size-lg);
   font-weight: 700;
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: var(--transition);
   text-transform: uppercase;
-  font-family: var(--font-primary);
-  box-shadow: 0 0 30px rgba(107, 33, 229, 0.5);
+  font-family: var(--font-secondary);
+  margin-bottom: var(--space-md);
 }
 
 .audit-cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(107, 33, 229, 0.7);
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,112 @@
+.back{
+    background: url('src/assets/gradient.jpg') no-repeat;
+}
+
+.faq-section {
+  background: url('src/assets/gradient.jpg') no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(107, 33, 229, 0.2);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-md);
+  cursor: pointer;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.faq-item:hover {
+  border-color: var(--color-purple);
+  background: rgba(107, 33, 229, 0.05);
+}
+
+.faq-item.active {
+  border-color: var(--color-purple);
+  background: rgba(107, 33, 229, 0.1);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg);
+}
+
+.faq-question h3 {
+  font-size: var(--font-size-lg);
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+}
+
+.faq-icon {
+  color: var(--color-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 0 var(--space-lg) var(--space-lg) var(--space-lg);
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--color-gray);
+  line-height: 1.8;
+}
+
+.faq-cta {
+  text-align: center;
+}
+
+.faq-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-2xl);
+  background: #ffffff;
+  border: none;
+  color: #000000;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.faq-cta-button:hover {
+  opacity:0.9;
+}
+
+@media (max-width: 768px) {
+  .faq-question {
+    padding: var(--space-md);
+  }
+  
+  .faq-question h3 {
+    font-size: var(--font-size-base);
+    padding-right: var(--space-md);
+  }
+  
+  .faq-answer {
+    padding: 0 var(--space-md) var(--space-md) var(--space-md);
+  }
+}
