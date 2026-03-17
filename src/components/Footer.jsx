@@ -53,7 +53,7 @@ const Footer = () => {
             <ul>
               <li>
                 <Mail size={16} />
-                <a href="mailto:hello@unifycreative.com">hello@unifycreative.com</a>
+                <a href="mailto:hello@unifycreative.com"></a>
               </li>
             </ul>
           </motion.div>
